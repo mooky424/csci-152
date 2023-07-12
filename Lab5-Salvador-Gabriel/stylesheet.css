@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+.container-1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, calc(173px));
+    grid-template-rows: repeat(2, 300px);
+    column-gap: 0.5em;
+}
+
+.container-2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, calc(200px));
+    grid-template-rows: repeat(2, 200px);
+}
+
+h1 {
+    grid-row: 1; grid-column: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.parallelogram {
+    display: grid;
+}
+
+.parallelogram > h1 {
+    font-weight: bold;
+    font-size: 64px;
+    writing-mode: vertical-lr;
+}
+
+.parallelogram > img {
+    grid-row: 1; grid-column: 1;
+    z-index: -1;
+    width: 346px;
+    height: 300px;
+    object-fit: fill;
+}
+
+.top > img{
+    clip-path: polygon(0 0, 50% 0, 100% 100%, 50% 100%);
+}
+
+.top > h1 {
+    transform: rotate(-30deg) translate(50%, 25%);
+}
+
+.bottom > img{
+    clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 100%);
+}
+
+.bottom > h1 {
+    transform: rotate(30deg) translate(50%, 20%);
+}
+
+.octagon {
+    display: grid;
+    position: relative;
+}
+
+.octagon > img {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    grid-row: 1; grid-column: 1;
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+}
+
+.octagon > h1 {
+    font-size: 20px;
+    position: absolute;
+    transform-origin: 50% 100px;
+}
+
+.octagon:first-child > h1 {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.octagon:nth-child(2) > h1 {
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.octagon:nth-child(3) > h1 {
+    right: 0;
+    top: 50%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: translateY(-50%);
+}
+
+.octagon:nth-child(4) > h1 {
+    bottom: 0;
+    left: 50%;
+    transform-origin: 50% -80px;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.octagon:nth-child(5) > h1 {
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.octagon:nth-child(6) > h1 {
+    left: 0;
+    top: 50%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: translateY(-50%);
+}
+
+.octagon:nth-child(7) > h1 {
+    bottom: 0;
+    left: 50%;
+    transform-origin: 50% -80px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.octagon:last-child > h1 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}

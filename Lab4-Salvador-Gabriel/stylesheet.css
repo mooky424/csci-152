@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 75px);
+    grid-template-rows: auto;
+    grid-gap: 0.5em;
+}
+
+img {
+    width: 150px;
+    height: calc(150px * 0.87);
+    filter: saturate(90%);
+    filter: sepia(100%);
+}
+
+.top {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.bottom {
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+}

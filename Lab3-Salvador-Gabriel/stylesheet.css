@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0px;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.dgray {
+    background-color: #444444;
+}
+
+body > section {
+    border: 1px solid black;
+    padding: 4px;
+    margin: 16px;
+}
+
+.basic1 {
+    font-size: 28px;
+    width: 385px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        '. a a'
+        'b c c'
+        'd d d';
+    grid-gap: 8px;
+    color: white;
+}
+
+.basic1 > div {
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.header {
+    grid-area: a;
+}
+
+.sidebar {
+    grid-area: b;
+}
+
+.content {
+    grid-area: c;
+}
+
+.footer {
+    grid-area: d;
+}
+
+.basic2 {
+    font-size: 28px;
+    width: 354px;
+    height: 329px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        'a a a a'
+        'b b c c'
+        'b b d e';
+    grid-gap: 8px;
+    color: white;
+}
+
+.basic2 > div {
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.one {
+    grid-area: a;
+}
+
+.two {
+    grid-area: b;
+}
+
+.three {
+    grid-area: c;
+}
+
+.four {
+    grid-area: d;
+}
+
+.five {
+    grid-area: e;
+}
+
+.advanced1 {
+    width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        'a a b c d e'
+        'a a f f g h'
+        'i . f f j j'
+        'k l . . j j';
+    background-color: darkgray;
+    grid-gap: 16px;
+    padding: 3em;
+    font-family: Arial;
+}
+
+.advanced1 > div {
+    border-radius: 8px;
+    border: 1px solid gray;
+    background-color: white;
+    padding: 1em;
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+.e {
+    grid-area: e;
+}
+
+.f {
+    grid-area: f;
+}
+
+.g {
+    grid-area: g;
+}
+
+.h {
+    grid-area: h;
+}
+
+.i {
+    grid-area: i; 
+}
+
+.j {
+    grid-area: j;
+}
+
+.k {
+    grid-area: k;
+}
+
+.l {
+    grid-area: l;
+}
